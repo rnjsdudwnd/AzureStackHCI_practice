@@ -1,0 +1,140 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20200826104107
+사용자 이름: NODE2\Administrator
+RunAs 사용자: NODE2\Administrator
+구성 이름: 
+Machine: NODE2 (Microsoft Windows NT 10.0.17763.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\WSLAB\03\1_Prereq.ps1'
+프로세스 ID: 12128
+PSVersion: 5.1.17763.1432
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1432
+BuildVersion: 10.0.17763.1432
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 C:\WSLAB\03\Prereq.log입니다.
+Script started at 08/26/2020 10:41:07
+
+WSLab Version v20.08.2
+Checking if OS is Windows 10 1511 (10586)/Server 2016 or newer
+	 OS is Windows 10 1511 (10586)/Server 2016 or newer
+
+
+    디렉터리: C:\WSLAB\03
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 10:41                ParentDisks
+d-----     2020-08-26  오전 10:41                Temp
+
+
+    디렉터리: C:\WSLAB\03\Temp
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 10:41                DSC
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 10:41                DiskSpd
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 10:41                ADK
+d-----     2020-08-26  오전 10:41                ADKWinPE
+d-----     2020-08-26  오전 10:41                SQL
+d-----     2020-08-26  오전 10:41                SCVMM
+d-----     2020-08-26  오전 10:41                UpdateRollup
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 10:41                VMFleet
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM\ADK
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-08-26  오전 10:41              0 Copy_ADK_with_adksetup.exe_here.txt
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM\ADKWinPE
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-08-26  오전 10:41              0 Copy_ADKWinPE_with_adkwinpesetup.exe_here.txt
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM\SQL
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-08-26  오전 10:41              0 Copy_SQL2017_or_SQL2019_with_setup.exe_here.txt
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM\SCVMM
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-08-26  오전 10:41              0 Copy_SCVMM_with_setup.exe_here.txt
+
+
+    디렉터리: C:\WSLAB\03\Temp\ToolsVHD\SCVMM\UpdateRollup
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     2020-08-26  오전 10:41              0 Copy_SCVMM_Update_Rollup_MSPs_here.txt
+Testing Convert-windowsimage presence
+	 Downloading Convert-WindowsImage
+Testing diskspd presence
+	 Diskspd not there - Downloading diskspd
+Testing VMFleet presence
+	 VMFleet not there - Downloading VMFleet
+Testing if modules are present
+	 Module xActiveDirectory 3.0.0.0 not found... Downloading
+Testing if modules are present
+	 Module xDHCpServer 2.0.0.0 not found... Downloading
+Testing if modules are present
+	 Module xDNSServer 1.15.0.0 not found... Downloading
+Testing if modules are present
+	 Module NetworkingDSC 7.4.0.0 not found... Downloading
+Testing if modules are present
+	 Module xPSDesiredStateConfiguration 8.10.0.0 not found... Downloading
+Testing DSC Module xActiveDirectory 3.0.0.0 Presence
+	 Module xActiveDirectory 3.0.0.0 is already installed
+Testing DSC Module xDHCpServer 2.0.0.0 Presence
+	 Module xDHCpServer 2.0.0.0 is already installed
+Testing DSC Module xDNSServer 1.15.0.0 Presence
+	 Module xDNSServer 1.15.0.0 is already installed
+Testing DSC Module NetworkingDSC 7.4.0.0 Presence
+	 Module NetworkingDSC 7.4.0.0 is already installed
+Testing DSC Module xPSDesiredStateConfiguration 8.10.0.0 Presence
+	 Module xPSDesiredStateConfiguration 8.10.0.0 is already installed
+Script finished at 08/26/2020 10:42:59 and took 1.85925467333333 Minutes
+**********************
+Windows PowerShell 기록 끝
+종료 시간: 20200826104259
+**********************

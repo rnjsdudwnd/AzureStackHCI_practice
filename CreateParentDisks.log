@@ -1,0 +1,102 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20200826120918
+사용자 이름: NODE2\Administrator
+RunAs 사용자: NODE2\Administrator
+구성 이름: 
+Machine: NODE2 (Microsoft Windows NT 10.0.17763.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\WSLAB\03\2_CreateParentDisks.ps1'
+프로세스 ID: 4940
+PSVersion: 5.1.17763.1432
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1432
+BuildVersion: 10.0.17763.1432
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 C:\WSLAB\03\CreateParentDisks.log입니다.
+Script started at 08/26/2020 12:09:18
+
+WSLab Version v20.08.2
+
+Lab telemetry
+By providing a telemetry information you will help us to improve WSLab scripts. There are two levels of a telemetry information and we are not collecting any personally identifiable information (PII).
+Details about telemetry levels and the content of telemetry messages can be found in documentation https://aka.ms/wslab/telemetry
+Available telemetry levels are:
+ * None  -- No information will be sent
+ * Basic -- Lab info will be sent (e.g. script execution time, number of VMs)
+ * Full  -- More details about the host machine and deployed VMs (e.g. guest OS)
+Would you be OK with providing an information about your WSLab usage?
+
+Tip: You can also configure telemetry settings explicitly in LabConfig.ps1 file or by setting an environmental variable and suppress this prompt.
+
+Telemetry has been set to Basic level, thank you for your valuable feedback.
+Checking if Hyper-V is installed
+	 Hyper-V is Installed
+Checking if Hyper-V Powershell module is installed
+	 Hyper-V is Installed
+Testing if some parent disk already exists and can be used
+Checking if at least 2GB RAM is available
+	 502,022 MB RAM Available
+Checking if volume filesystem is NTFS or ReFS
+	 Volume filesystem is NTFS
+Please select ISO image with Windows Server 2016, 2019 or Server Insider
+
+GAC    Version        Location
+---    -------        --------
+True   v4.0.30319     C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089...
+File C:\Users\Administrator\Downloads\windowserver2019.iso selected
+Testing if selected ISO is Server Media
+	 Server Edition found
+Please select Windows Server Updates (*.msu). Click Cancel if you don't want any.
+True   v4.0.30319     C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089...
+	 Tools.vhdx not found, will be created
+Creating Server Parent disk(s)
+	 Creating Server Parent Win2019_G2.vhdx
+
+Windows(R) Image to Virtual Hard Disk Converter for Windows(R) 10
+Copyright (C) Microsoft Corporation.  All rights reserved.
+Version 10.0.14278.1000.amd64fre.rs1_es_media.160201-1707
+INFO   : Looking for the requested Windows image in the WIM file
+INFO   : Creating sparse disk...
+INFO   : Mounting VHDX...
+INFO   : Initializing disk...
+INFO   : Creating EFI system partition...
+INFO   : Formatting system volume...
+INFO   : Setting system partition as ESP...
+INFO   : Creating MSR partition...
+INFO   : Creating windows partition...
+INFO   : Formatting windows volume...
+INFO   : Windows path (I:) has been assigned.
+INFO   : Windows path (I:) took 1 attempts to be assigned.
+INFO   : System volume location: H:
+INFO   : Applying image to VHDX. This could take a while...
+INFO   : Image was applied successfully.
+INFO   : Making image bootable...
+PS>종료 오류(): "bcdboot.exe failed with code 87!"
+ERROR  : bcdboot.exe failed with code 87!
+INFO   : Log folder is C:\Users\ADMINI~1\AppData\Local\Temp\2\Convert-WindowsImage\4cd423dc-4463-48e7-823f-fa3b985a7b80
+INFO   : Done.
+	 Creating Server Parent Win2019Core_G2.vhdx
+
+Windows(R) Image to Virtual Hard Disk Converter for Windows(R) 10
+Copyright (C) Microsoft Corporation.  All rights reserved.
+Version 10.0.14278.1000.amd64fre.rs1_es_media.160201-1707
+INFO   : Looking for the requested Windows image in the WIM file
+INFO   : Creating sparse disk...
+INFO   : Mounting VHDX...
+INFO   : Initializing disk...
+INFO   : Creating EFI system partition...
+INFO   : Formatting system volume...
+INFO   : Setting system partition as ESP...
+INFO   : Creating MSR partition...
+INFO   : Creating windows partition...
+INFO   : Formatting windows volume...
+INFO   : Windows path (H:) has been assigned.
+INFO   : Windows path (H:) took 1 attempts to be assigned.
+INFO   : System volume location: E:
+INFO   : Applying image to VHDX. This could take a while...
+INFO   : Image was applied successfully.
+INFO   : Making image bootable...

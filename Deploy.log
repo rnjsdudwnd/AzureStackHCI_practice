@@ -1,0 +1,162 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20200826115605
+사용자 이름: NODE2\Administrator
+RunAs 사용자: NODE2\Administrator
+구성 이름: 
+Machine: NODE2 (Microsoft Windows NT 10.0.17763.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\WSLAB\03\3_Deploy.ps1'
+프로세스 ID: 596
+PSVersion: 5.1.17763.1432
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1432
+BuildVersion: 10.0.17763.1432
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 C:\WSLAB\03\Deploy.log입니다.
+Script started at 08/26/2020 11:56:05
+
+WSLab Version v20.08.2
+
+Lab telemetry
+By providing a telemetry information you will help us to improve WSLab scripts. There are two levels of a telemetry information and we are not collecting any personally identifiable information (PII).
+Details about telemetry levels and the content of telemetry messages can be found in documentation https://aka.ms/wslab/telemetry
+Available telemetry levels are:
+ * None  -- No information will be sent
+ * Basic -- Lab info will be sent (e.g. script execution time, number of VMs)
+ * Full  -- More details about the host machine and deployed VMs (e.g. guest OS)
+Would you be OK with providing an information about your WSLab usage?
+
+Tip: You can also configure telemetry settings explicitly in LabConfig.ps1 file or by setting an environmental variable and suppress this prompt.
+
+Telemetry has been set to Basic level, thank you for your valuable feedback.
+List of variables used
+	 Prefix used in lab is WSLab-
+	 Switchname is WSLab-LabSwitch
+	 Workdir is C:\WSLAB\03
+	 LabFolder is C:\WSLAB\03\LAB
+	 Requested ManagementSubnetIDs:
+Checking if OS is Windows 10 1511 (10586)/Server 2016 or newer
+	 OS is Windows 10 1511 (10586)/Server 2016 or newer
+Checking if Hyper-V is installed
+	 Hyper-V is Installed
+Checking if Hyper-V Powershell module is installed
+	 Hyper-V is Installed
+Checking if at least 2GB RAM is available
+	 496,162 MB RAM Available
+Checking if volume filesystem is NTFS or ReFS
+	 Volume filesystem is NTFS
+Creating Switch
+	 Checking if WSLab-LabSwitch already exists...
+	 WSLab-LabSwitch exists. Looks like lab with same prefix exists.
+Internet connectivity requested
+	 Detecting default vSwitch
+	 Default switch not present, detecting external vSwitch WSLab-LabSwitch-External
+	 External vSwitch  WSLab-LabSwitch-External detected
+Checking if lab already exists.
+	 Lab does not exist, will be created
+	 Starting IP for AdditionalNetworks is 1
+Creating Mountdir
+
+
+    디렉터리: C:\WSLAB\03\Temp
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d----l     2020-08-26  오전 11:54                MountDir
+Creating VMs dir
+
+
+    디렉터리: C:\WSLAB\03\LAB
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2020-08-26  오전 11:56                VMs
+Looking for Tools Parent Disks
+	 Tools parent disk C:\WSLAB\03\ParentDisks\tools.vhdx found
+Configuring DC
+	 Looking for DC to be imported
+WriteWarning : 'WriteWarning' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지
+ 검증한 다음 다시 시도하십시오.
+위치 C:\WSLAB\03\3_Deploy.ps1:1390 문자:21
++                     WriteWarning "You are trying to deploy a previous ...
++                     ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (WriteWarning:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+WriteWarning : 'WriteWarning' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한
+ 다음 다시 시도하십시오.
+위치 C:\WSLAB\03\3_Deploy.ps1:1390 문자:21
++                     WriteWarning "You are trying to deploy a previous ...
++                     ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (WriteWarning:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+		 Virtual Machine DCS01 registered with a new VM ID 8f2793c9-a531-46f2-a638-02399caf782a
+		 Virtual Machine DCS01 located in folder C:\WSLAB\03\LAB\DCS01 imported
+Checkpoint-VM : 검사점 작업이 실패했습니다.
+
+검사점을 만들 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1405 문자:19
++             $DC | Checkpoint-VM -SnapshotName Initial
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Checkpoint-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.CheckpointVM
+Checkpoint-VM : 검사점 작업이 실패했습니다.
+
+검사점을 만들 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1405 문자:19
++             $DC | Checkpoint-VM -SnapshotName Initial
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Checkpoint-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.CheckpointVM
+
+	 Virtual Machine DCS01 checkpoint created
+	 Configuring Network
+	 Enabling DC VMNics device naming
+	 Adding Tools disk to DC machine
+		 Adding Virtual Hard Disk C:\WSLAB\03\LAB\VMs\ToolsDiskDC.vhdx
+	 Starting Virtual Machine DCS01
+Start-VM : 'DCS01'이(가) 상태를 변경하지 못했습니다.
+
+개체가 사용 중인 동안에는 작업을 수행할 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1466 문자:19
++             $DC | Start-VM
++                   ~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.StartVM
+Start-VM : 'DCS01'이(가) 상태를 변경하지 못했습니다.
+
+개체가 사용 중인 동안에는 작업을 수행할 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1466 문자:19
++             $DC | Start-VM
++                   ~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.StartVM
+
+	 Renaming DCS01 to WSLab-DCS01
+DC was not started. Starting now...
+Start-VM : 'DCS01'이(가) 상태를 변경하지 못했습니다.
+
+개체가 사용 중인 동안에는 작업을 수행할 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1493 문자:15
++         $DC | Start-VM
++               ~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.StartVM
+Start-VM : 'DCS01'이(가) 상태를 변경하지 못했습니다.
+
+개체가 사용 중인 동안에는 작업을 수행할 수 없습니다.
+위치 C:\WSLAB\03\3_Deploy.ps1:1493 문자:15
++         $DC | Start-VM
++               ~~~~~~~~
+    + CategoryInfo          : ResourceBusy: (:) [Start-VM], VirtualizationException
+    + FullyQualifiedErrorId : ObjectInUse,Microsoft.HyperV.PowerShell.Commands.StartVM
+
+	 Adding Network Adapter Internet
+	 Connecting Network Adapter Internet to WSLab-LabSwitch-External
+	 Waiting for Active Directory on WSLab-DCS01 to be Started.
